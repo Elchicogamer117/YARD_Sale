@@ -31,6 +31,7 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            justify-items: center;
         }
         .logo {
             width: 150px;
@@ -51,23 +52,27 @@
             margin-bottom: 32px;
             text-align: center;
         }
-        .form {
-            display: flex;
-            flex-direction: column;
-        }
-        .label {
-            font-size: var(--sm);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .input {
+        .emailImage {
+            width: 136px;
+            height: 136px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 32px;
-            font-size: var(--md);
-            padding: 4px;
-            margin-bottom: 8px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 24px;
+        }
+        .emailImage img {
+            width: 80px;
+        }
+        .resend{
+            font-size: var(--sm);
+        }
+        .resend span {
+            color: var(--light-pink);
+        }
+        .resend a {
+            color: var(--flag--green);
+            text-decoration: none;
         }
         .primaryButton {
             background-color: var(--flag--green);
@@ -89,7 +94,6 @@
                 display: block;
             }
         }
-
     </style>
 </head>
 <body>
@@ -98,19 +102,19 @@
         <div class="formContainer">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo"> 
 
-            <h1 class="title"> Create a new password </h1>
-            <p class="subtitle"> Enter a new password for your account</p>
+            <h1 class="title"> Email has been sent! 📧 </h1>
+            <p class="subtitle"> Please check your inbox for instructions on how to reset the paswword 😃</p>
 
-            <form action="/" class="form">
-                <label for="password" class="label"> Password </label>
-                <input type="password" id="password" placeholder="**********" class="input inputPwd">
+            <div class="emailImage">
+                <img src="./icons/email.svg" alt="email">
+            </div>
 
-                <label for="rePassword" class="label"> Password </label>
-                <input type="password" id="rePassword" placeholder="**********" class="input inputPwd">
-
-                <input type="submit" value="confirm" class="primaryButton loginButton">
-
-            </form>
+            <button class="primaryButton"> Login </button>
+            <p class="resend">
+                <span>Didn't receive the email? </span>
+                <a href="/"> Resend </a>
+            </p>
+            
         </div>
     </div>
 
