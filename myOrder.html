@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logos/favicon_bota_fora.svg" type="img">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My order</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --flag--green: #004c00;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0; 
+            font-family: 'Quicksand', sans-serif;
+        }
+        .myOrder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+        .myOrderContainer {
+            display: grid;
+            grid-template-rows: auto fr auto;
+            width: 300px;
+        }
+        .myOrderContent {
+            display: flex;
+            flex-direction: column;
+        }
+        .order {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+        .order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+        .order p span:nth-child(1) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .order p span:nth-child(2) {
+            font-size: var(--sm);
+            color: var(--light-pink);
+        }
+        .order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+        }
+        .shoopingCard {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .shoopingCard figure {
+            margin: 0;
+        }
+        .shoopingCard figure img {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
+        .shoopingCard p:nth-child(2) {
+            color: var(--light-pink);
+        }
+        .shoopingCard p:nth-child(3) {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="myOrder">
+        
+        <div class="myOrderContainer">
+            <h1 class="title"> My order</h1>
+
+            <div class="myOrderContent">
+                <div class="order">
+                    <p>
+                        <span> 04.25.2021</span>
+                        <span> 6 articulos</span>
+                    </p>
+                    <p>
+                        $560 
+                    </p>
+                </div>
+                <div class="shoopingCard">        
+                    <figure>
+                        <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                    </figure>
+                    <p> $120 </p>
+                    <p> Bagpack </p>
+                </div>
+                <div class="shoopingCard">        
+                    <figure>
+                        <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                    </figure>
+                    <p> $120 </p>
+                    <p> Toys </p>
+                </div>
+                <div class="shoopingCard">        
+                    <figure>
+                        <img src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">                
+                    </figure>
+                    <p> $120 </p>
+                    <p> Camera </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
