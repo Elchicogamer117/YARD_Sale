@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="./assets/logos/favicon_bota_fora.svg" type="img">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+      <title>My orders</title>
+      <style>
+            :root {
+                  --white: #FFFFFF;
+                  --black: #000000;
+                  --light-pink: #C7C7C7;
+                  --text-input-field: #f7f7f7;
+                  --flag--green: #004c00;
+                  --sm: 14px;
+                  --md: 16px;
+                  --lg: 18px;
+            }
+            body {
+                  margin: 0; 
+                  font-family: 'Quicksand', sans-serif;
+            }
+            .myOrder {
+                  width: 100%;
+                  height: 100%;
+                  display: grid;
+                  place-items: center;
+            }
+            .title {
+                  font-size: var(--lg);
+                  margin-bottom: 40px;
+            }
+            .myOrderContainer {
+                  display: grid;
+                  grid-template-rows: auto fr auto;
+                  width: 300px;
+            }
+            .myOrderContent {
+                  display: flex;
+                  flex-direction: column;
+            }
+            .order {
+                  display: grid;
+                  grid-template-columns: auto 1fr auto;
+                  gap: 16px;
+                  align-items: center;
+                  margin-bottom: 8px;
+            }
+            .order p:nth-child(1) {
+                  display: flex;
+                  flex-direction: column;
+            }
+            .order p span:nth-child(1) {
+                  font-size: var(--md);
+                  font-weight: bold;
+            }
+            .order p span:nth-child(2) {
+                  font-size: var(--sm);
+                  color: var(--light-pink);
+            }
+            .order p:nth-child(2) {
+                  text-align: end;
+                  font-weight: bold;
+            }
+
+      </style>
+</head>
+<body>
+      <div class="myOrder">
+            <div class="myOrderContainer">
+                  <h1 class="title"> My order</h1>
+                  <div class="myOrderContent">
+                        <div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div>
+                        <div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div><div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div><div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div><div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div><div class="order">
+                              <p>
+                                    <span> 04.25.2021</span>
+                                    <span> 6 articles</span>
+                              </p>
+                              <p>
+                                    $560 
+                              </p>
+                              <img src="./assets/icons/flechita.svg" alt="arrow">
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>
