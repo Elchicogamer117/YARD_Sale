@@ -49,6 +49,25 @@
             object-fit: cover;
             border-radius: 0 0 20px 20px;
       }
+      .points {
+        display: flex;
+        justify-content: center;
+      }
+      .points > li {
+        background: var(--light-pink);
+        width: 8px;
+        height: 8px;
+        margin: 8px 6px;
+        border-radius: 50%;
+        list-style-type: none;
+        cursor: pointer;
+      }
+      .points > .active {
+        background: var(--flag--green);
+      }
+      .points > li:hover {
+        background: var(--flag--green);
+      }
       .productInfo {
             margin: 24px 24px 0 24px;
       }
@@ -99,6 +118,11 @@
                   <img src="./assets/icons/icon_close.png" alt="close">
             </div>
             <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="bagpack">
+            <div class="points">
+                  <li class="active"></li>
+                  <li></li>
+                  <li></li>
+                </div>
             <div class="productInfo">
                   <p> $120 </p>
                   <p> Bagpack </p>

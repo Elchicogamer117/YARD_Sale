@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logos/favicon_bota_fora.svg" type="img">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>shooping cart</title>
+</head>
+<style>
+    :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --light-pink: #C7C7C7;
+        --text-input-field: #f7f7f7;
+        --flag--green: #004c00;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+    }
+    body {
+        margin: 0; 
+        font-family: 'Quicksand', sans-serif;
+    }
+    .productDetail {
+        width: 360px;
+        padding: 24px;
+        box-sizing: border-box;
+        position: absolute;
+    }
+    .titleContainer {
+        display: flex;
+    }
+    .titleContainer img {
+        transform: rotate(180deg);
+        margin-right: 12px;
+    }
+    .title {
+        font-size: var(--lg);
+        font-weight: bold;
+    }
+    .myOrder {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .myOrderContainer {
+        display: grid;
+        grid-template-rows: auto fr auto;
+        width: 300px;
+    }
+    .myOrderContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .order {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: center;
+        background-color: var(--text-input-field);
+        margin-bottom: 24px;
+        border-radius: 8px;
+        padding: 0 24px;
+    }
+    .order p:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+    .order p span:nth-child(1) {
+        font-size: var(--md);
+        font-weight: bold;
+    }
+    .order p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+    }
+    .shoopingCard {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: center;
+    }
+    .shoopingCard figure {
+        margin: 0;
+    }
+    .shoopingCard figure img {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        object-fit: cover;
+
+    }
+    .shoopingCard p:nth-child(2) {
+        color: var(--light-pink);
+    }
+    .shoopingCard p:nth-child(3) {
+        font-weight: bold;
+    }
+    .primaryButton {
+        background-color: var(--flag--green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 100%;
+        height:  48px;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+    }
+    @media (max-width: 640px) {
+        .productDetail {
+                width: 100%;
+        }
+    }
+      
+</style>
+<body>
+    <aside class="productDetail">
+        <div class="titleContainer">
+            <img src="./assets/icons/flechita.svg" alt="arrow">
+            <p class="title"> Shooping cart </p>
+        </div>
+        <div class="myOrderContent">
+            <div class="shoopingCard">        
+                <figure>
+                    <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                </figure>
+                <p> Bagpack </p>
+                <p> $120 </p>
+                <img src="./assets/icons/icon_close.png" alt="close">
+            </div>
+            <div class="shoopingCard">        
+                <figure>
+                    <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                </figure>
+                <p> Toys </p>
+                <p> $120 </p>
+                <img src="./assets/icons/icon_close.png" alt="close">
+            </div>
+            <div class="shoopingCard">        
+                <figure>
+                    <img src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">                
+                </figure>
+                <p> Camera </p>
+                <p> $120 </p>
+                <img src="./assets/icons/icon_close.png" alt="close">
+            </div>
+            <div class="order">
+                <p>
+                    <span> Total </span>
+                </p>
+                <p>
+                    $560 
+                </p>
+            </div>
+            <button class="primaryButton">
+                Checkout
+            </button>
+        </div> 
+    </aside>
+</body>
+</html>
