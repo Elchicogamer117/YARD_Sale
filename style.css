@@ -1,0 +1,138 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-pink: #C7C7C7;
+    --text-input-field: #f7f7f7;
+    --flag--green: #004c00;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    place-items: center;
+    border-bottom: 1px solid var(--light-pink);
+}
+.menu {
+    display: none;
+}
+.logo {
+    width: 100px;
+}
+.navbarLeft {
+    display: flex;
+}
+.navbarLeft ul {
+    margin-left: 20px;
+}
+.navbarLeft ul,
+.navbarRight ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarLeft ul li a,
+.navbarRight ul li a {
+    text-decoration: none;
+    color: var(--light-pink);
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    padding: 12px;
+}
+.navbarLeft ul li a:hover,
+.navbarRight ul li a:hover {
+    color: var(--flag--green);
+    border: 1px solid var(--flag--green);
+}
+.navbarEmail {
+    color: var(--light-pink);
+    font-size: var(--sm);
+    margin-right: 20px;
+    cursor: pointer;
+}
+.navbarEmail:hover {
+    color: var(--flag--green);
+}
+.navbarEmail img {
+    transform: rotate(90deg);
+    margin-left: 4px;
+}
+.navbarShoppingCard {
+    position: relative;
+}
+.navbarShoppingCard div{
+    width: 18px;
+    height: 18px;
+    color: var(--light-pink);
+    background-color: var(--flag--green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inactive {
+    display: none;
+}
+.desktopMenu {
+    position: absolute;
+    top: 66px;
+    right: 66px;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--light-pink);
+    border-radius: 8px;
+    padding: 20px 20px 0 20px;
+    background: var(--white);
+}
+.desktopMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.desktopMenu ul li{
+    text-align:  end;
+}
+.desktopMenu ul li:not(:last-child){
+    font-weight: bold;
+}
+.desktopMenu ul li:last-child{
+    padding-top: 20px;
+    border-top:  1px solid var(--light-pink);
+    color: var(--flag--green);
+}
+.desktopMenu ul li:last-child a {
+    color: var(--flag--green);
+    font-size: var(--sm);
+}
+.desktopMenu ul li a {
+    color: var(--black);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .menu {
+          display: block;
+    }
+    .navbarLeft ul {
+          display: none;
+    }
+    .navbarEmail {
+          display: none;
+    }
+}
