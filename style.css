@@ -68,6 +68,7 @@ nav {
 }
 .navbarShoppingCard {
     position: relative;
+    cursor: pointer;
 }
 .navbarShoppingCard div{
     width: 18px;
@@ -98,6 +99,7 @@ nav {
     border-radius: 8px;
     padding: 20px 20px 0 20px;
     background: var(--white);
+    z-index: 1;
 }
 .desktopMenu ul {
     list-style: none;
@@ -129,9 +131,11 @@ nav {
 /** Menu mobile */
 .mobileMenu {
     position: absolute;
-    top: 60px;
+    top: 66px;
     height: 80%;
     padding: 24px;
+    background: var(--white);
+    z-index: 1;
 }
 .mobileMenu a {
     text-decoration: none;
@@ -165,9 +169,102 @@ nav {
     font-size: var(--sm);
 }
 
+/** Shooping cart */
+
+.productDetail {
+    width: 360px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+.titleContainer {
+    display: flex;
+}
+.arrow {
+    margin-right: 12px;
+    cursor: pointer;
+}
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.myOrder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.myOrderContainer {
+    display: grid;
+    grid-template-rows: auto fr auto;
+    width: 300px;
+}
+.myOrderContent {
+    display: flex;
+    flex-direction: column;
+}
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+.primaryButton {
+    background-color: var(--flag--green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    height:  48px;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+}
+.shoopingCard {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        gap: 16px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+.shoopingCard figure {
+    margin: 0;
+}
+.shoopingCard figure img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+.shoopingCard p:nth-child(2) {
+    color: var(--light-pink);
+}
+.shoopingCard p:nth-child(3) {
+    font-weight: bold;
+}
+
 @media (max-width: 900px) {
     .menu {
         display: block;
+        cursor: pointer;
     }
     .navbarLeft ul {
         display: none;
@@ -178,6 +275,9 @@ nav {
     .desktopMenu {
         display: none;
     }
+    .productDetail {
+        width: 100%;
+}
 }
 
 @media (min-width: 901px) {
