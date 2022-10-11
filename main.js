@@ -126,6 +126,26 @@ function renderProduct(arrayProducts) {
   }
 }
 
+function renderProductInner(arrayProducts) {
+  for (product of arrayProducts) {
+    const cardsHTML = 
+        `<div class="productCard">
+          <img src= ${product.image}
+              alt="${product.name}">
+          <div class="productInfo">
+            <div>
+              <p> $${product.price} </p>
+              <p> ${product.name} </p>
+            </div>
+            <figure>
+              <img src="./assets/icons/btAddToCart.svg" alt="addToCart">
+            </figure>
+          </div>
+        </div>`;
+    cardConteiner.innerHTML += cardsHTML;
+  }
+}
 
-renderProduct(productList);
+// renderProduct(productList);
+renderProductInner(productList);
 
