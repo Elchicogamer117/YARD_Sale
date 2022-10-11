@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,72 +19,86 @@
             --md: 16px;
             --lg: 18px;
         }
+
         body {
-            margin: 0; 
+            margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+
         .cardsContainer {
             display: grid;
-            grid-template-columns:repeat(auto-fill, 240px);
+            grid-template-columns: repeat(auto-fill, 240px);
             gap: 24px;
             place-content: center;
             margin-top: 24px;
         }
+
         .productCard {
             width: 240px;
         }
-        .productCard img{
+
+        .productCard img {
             width: 240px;
             height: 240px;
             border-radius: 20px;
             object-fit: cover;
         }
+
         .productInfo {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 12px;
         }
-        .productInfo figure{
+
+        .productInfo figure {
             margin: 0;
         }
+
         .productInfo figure img {
             width: 35px;
             height: 35px;
         }
+
         .productInfo div p:nth-child(1) {
             font-weight: bold;
             font-size: var(--md);
             margin-top: 0;
             margin-bottom: 4px;
         }
+
         .productInfo div p:nth-child(2) {
             font-size: var(--sm);
             margin-top: 0px;
             margin-bottom: 0px;
             color: var(--light-pink);
         }
+
         @media (max-width: 640px) {
             .cardsContainer {
-            grid-template-columns:repeat(auto-fill, 180px);
-        }
-        .productCard {
-            width: 180px;
-        }
-        .productCard img{
-            width: 180px;
-            height: 180px;
-            border-radius: 15px;
-        }
+                grid-template-columns: repeat(auto-fill, 180px);
+            }
+
+            .productCard {
+                width: 180px;
+            }
+
+            .productCard img {
+                width: 180px;
+                height: 180px;
+                border-radius: 15px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <section class="mainContainer">
         <div class="cardsContainer">
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/776092/pexels-photo-776092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -95,7 +110,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/2836955/pexels-photo-2836955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/2836955/pexels-photo-2836955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -105,10 +121,11 @@
                         <img src="./assets/icons/btAddToCart.svg" alt="addToCart">
                     </figure>
                 </div>
-                    
+
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/8369215/pexels-photo-8369215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/8369215/pexels-photo-8369215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -120,32 +137,35 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
                         <p> Bagpack </p>
                     </div>
                     <figure>
-                    <img src="./assets/icons/btAddToCart.svg" alt="addToCart">
-                </figure>
+                        <img src="./assets/icons/btAddToCart.svg" alt="addToCart">
+                    </figure>
                 </div>
-                
+
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
                         <p> Bike </p>
-                    </div>                    
+                    </div>
                     <figure>
                         <img src="./assets/icons/btAddToCart.svg" alt="addToCart">
                     </figure>
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/11203752/pexels-photo-11203752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/11203752/pexels-photo-11203752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -157,7 +177,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/1336873/pexels-photo-1336873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/1336873/pexels-photo-1336873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -169,7 +190,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -181,7 +203,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -193,7 +216,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -205,7 +229,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/175039/pexels-photo-175039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -217,7 +242,8 @@
                 </div>
             </div>
             <div class="productCard">
-                <img src="https://images.pexels.com/photos/5583115/pexels-photo-5583115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <img src="https://images.pexels.com/photos/5583115/pexels-photo-5583115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="">
                 <div class="productInfo">
                     <div>
                         <p> $120 </p>
@@ -228,8 +254,9 @@
                     </figure>
                 </div>
             </div>
-            
+
         </div>
     </section>
 </body>
+
 </html>
