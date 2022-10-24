@@ -1,3 +1,4 @@
+//*  Selectores 
 const menuEmail = document.querySelector(".navbarEmail");
 const desktopMenu = document.querySelector(".desktopMenu");
 
@@ -8,10 +9,14 @@ const shoppingCardIcon = document.querySelector(".navbarShoppingCard");
 const shoppingCardArrow = document.querySelector(".arrow");
 const shoppingCardMenu = document.querySelector(".productDetailCards");
 
+const productDetail = document.querySelector(".productDetail");
+const productDetailClose = document.querySelector(".productDetailClose");
+
 menuEmail.addEventListener("click", toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
 shoppingCardIcon.addEventListener("click", toggleCartMenu);
 shoppingCardArrow.addEventListener("click", toggleCartMenu);
+productDetailClose.addEventListener("click", closeProductDetail);
 
 function toggleDesktopMenu() {
   desktopMenu.classList.toggle("inactive");
@@ -20,11 +25,22 @@ function toggleDesktopMenu() {
 function toggleMobileMenu() {
   mobileMenu.classList.toggle("inactive");
   shoppingCardMenu.classList.add("inactive");
+  productDetail.classList.add("inactive")
 }
 
 function toggleCartMenu() {
   shoppingCardMenu.classList.toggle("inactive");
   mobileMenu.classList.add("inactive");
+  productDetail.classList.add("inactive")
+}
+
+function openProductDetail() {
+  productDetail.classList.remove("inactive");
+  mobileMenu.classList.add("inactive");
+  shoppingCardMenu.classList.add("inactive");
+}
+function closeProductDetail() {
+  productDetail.classList.add("inactive");
 }
 
 const productList = [];
@@ -90,6 +106,8 @@ productList.push({
 });
 
 const cardConteiner = document.querySelector('.cardsContainer');
+// const productImgen = document.querySelector(".imgCards");
+// productImgen.addEventListener("click", openProductDetail);
 
 function renderProduct(arrayProducts) {
   for (product of arrayProducts) {
@@ -98,9 +116,10 @@ function renderProduct(arrayProducts) {
   
     const productImg = document.createElement('img');
     productImg.setAttribute('src', product.image);
+    productImg.addEventListener("click", openProductDetail);
   
     const productInfo = document.createElement('div');
-    productInfo.classList.add('productInfo');
+    productInfo.classList.add('productInfoCards');
   
     const productInfoDiv = document.createElement('div');
   
@@ -113,7 +132,6 @@ function renderProduct(arrayProducts) {
     const productInfoFigure =  document.createElement('figure');
     const productImgCart = document.createElement('img');
     productImgCart.setAttribute('src', './assets/icons/btAddToCart.svg');
-  
   
     productInfoDiv.append(productPrice, productName);
   
@@ -128,9 +146,10 @@ function renderProduct(arrayProducts) {
 
 function renderProductInner(arrayProducts) {
   for (product of arrayProducts) {
+
     const cardsHTML = 
         `<div class="productCard">
-          <img src= ${product.image}
+          <img src= ${product.image} 
               alt="${product.name}">
           <div class="productInfoCards">
             <div>
@@ -146,6 +165,6 @@ function renderProductInner(arrayProducts) {
   }
 }
 
-// renderProduct(productList);
-renderProductInner(productList);
+renderProduct(productList);
+// renderProductInner(productList);
 
