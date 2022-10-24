@@ -6,7 +6,7 @@ const mobileMenu = document.querySelector(".mobileMenu");
 
 const shoppingCardIcon = document.querySelector(".navbarShoppingCard");
 const shoppingCardArrow = document.querySelector(".arrow");
-const shoppingCardMenu = document.querySelector(".productDetail");
+const shoppingCardMenu = document.querySelector(".productDetailCards");
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
@@ -132,7 +132,7 @@ function renderProductInner(arrayProducts) {
         `<div class="productCard">
           <img src= ${product.image}
               alt="${product.name}">
-          <div class="productInfo">
+          <div class="productInfoCards">
             <div>
               <p> $${product.price} </p>
               <p> ${product.name} </p>
